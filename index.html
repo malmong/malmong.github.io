@@ -5,23 +5,18 @@
   <title>선물 페이지</title>
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
-
 <body style="text-align:center; font-family:sans-serif; margin-top:50px;">
 
   <h1>🎁 선물 도착!</h1>
   <p>아래 이미지를 눌러 확인하세요</p>
 
-  <!-- 홈페이지에서 보일 이미지 -->
   <a href="https://malmong.github.io/banner.jpg">
     <img src="https://malmong.github.io/banner.jpg" width="300">
   </a>
 
   <br><br>
 
-  <button onclick="sendLink()"
-          style="padding:12px 20px; font-size:16px; cursor:pointer;">
-    친구에게 보내기
-  </button>
+  <button onclick="sendLink()">친구에게 보내기</button>
 
   <script>
     Kakao.init('72d6704def40e268e1835d742ac6f31c');
@@ -30,12 +25,10 @@
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '선물 도착!',
-          description: '눌러서 확인해봐',
-          // 카카오톡 메시지 카드에 보일 이미지
+          title: ' ',
+          description: ' ',
           imageUrl: 'https://malmong.github.io/image.gif',
           link: {
-            // 클릭했을 때 열릴 페이지
             mobileWebUrl: 'https://malmong.github.io',
             webUrl: 'https://malmong.github.io'
           }
@@ -43,6 +36,5 @@
       });
     }
   </script>
-
 </body>
 </html>
