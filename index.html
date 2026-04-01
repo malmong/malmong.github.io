@@ -2,21 +2,77 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>선물 페이지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>깜짝 카드</title>
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      width: 360px;
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .hero img {
+      width: 100%;
+      display: block;
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .desc {
+      font-size: 18px;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .share {
+      margin-top: 14px;
+      background: #fee500;
+      color: #111;
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:sans-serif; margin-top:50px;">
-
-  <h1>🎁 선물 도착!</h1>
-  <p>아래 이미지를 눌러 확인하세요</p>
-
-  <a href="https://malmong.github.io/banner.jpg">
-    <img src="https://malmong.github.io/banner.jpg" width="300">
-  </a>
-
-  <br><br>
-
-  <button onclick="sendLink()">친구에게 보내기</button>
+<body>
+  <div class="card">
+    <div class="hero">
+      <a href="https://malmong.github.io">
+        <img src="https://malmong.github.io/banner.jpg" alt="깜짝 이미지">
+      </a>
+    </div>
+    <div class="content">
+      <div class="title">깜짝 선물 도착 🎁</div>
+      <div class="desc">이미지를 눌러 확인해봐</div>
+      <a class="btn" href="https://malmong.github.io">열어보기</a>
+      <br>
+      <button class="btn share" onclick="sendLink()">카카오톡으로 보내기</button>
+    </div>
+  </div>
 
   <script>
     Kakao.init('72d6704def40e268e1835d742ac6f31c');
@@ -25,8 +81,8 @@
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: ' ',
-          description: ' ',
+          title: '깜짝 선물 도착 🎁',
+          description: '눌러서 확인해봐',
           imageUrl: 'https://malmong.github.io/image.gif',
           link: {
             mobileWebUrl: 'https://malmong.github.io',
