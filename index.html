@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>카카오톡 버튼있는 메시지 전송하기</title>
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+  <p><strong>아래 카카오톡 버튼을 눌러 전송하세요</strong></p>
+
+  <button id="kakao-share-btn" onclick="sendLink()">
+    카카오톡으로 보내기
+  </button>
+
+  <script>
+    Kakao.init('72d6704def40e268e1835d742ac6f31c');
+
+    function sendLink() {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '💌 함께 온 메시지',
+          description: '천옥 받아가세요.',
+          imageUrl: 'https://malmong.github.io/image.GIF',
+          link: {
+            mobileWebUrl: 'https://malmong.github.io',
+            webUrl: 'https://malmong.github.io'
+          }
+        },
+        buttons: [
+          {
+            title: '선물 확인하기',
+            link: {
+              mobileWebUrl: 'https://malmong.github.io',
+              webUrl: 'https://malmong.github.io'
+            }
+          }
+        ]
+      });
+    }
+  </script>
+</body>
+</html>
