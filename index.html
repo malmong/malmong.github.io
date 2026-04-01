@@ -1,18 +1,37 @@
-<script>
-  Kakao.init('72d6704def40e268e1835d742ac6f31c');
+<body style="text-align:center; font-family:sans-serif; margin-top:50px;">
 
-  function sendLink() {
-    Kakao.Share.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: '또 속니 병신아ㅋㅋㅋㅋㅋㅋㅋ',  // 텍스트 제거
-        description: '아이 재밌어~~~',  // 텍스트 제거
-        imageUrl: 'https://malmong.github.io/banner.gif.jpg', // ⭐ 중요
-        link: {
-          mobileWebUrl: 'https://malmong.github.io',
-          webUrl: 'https://malmong.github.io'
+  <h1>🎁 선물 도착!</h1>
+  <p>아래 이미지를 눌러 확인하세요</p>
+
+  <a href="https://malmong.github.io/banner.gif">
+    <img src="https://malmong.github.io/banner.gif" width="300">
+  </a>
+
+  <br><br>
+
+  <!-- 여기 추가 -->
+  <button onclick="sendLink()" 
+          style="padding:12px 20px; font-size:16px; cursor:pointer;">
+    친구에게 보내기
+  </button>
+
+  <script>
+    Kakao.init('72d6704def40e268e1835d742ac6f31c');
+
+    function sendLink() {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '또 속니 병신아ㅋㅋㅋㅋㅋㅋㅋ',
+          description: '아이 재밌어~~~',
+          imageUrl: 'https://malmong.github.io/banner.gif', // ← 이거 수정
+          link: {
+            mobileWebUrl: 'https://malmong.github.io',
+            webUrl: 'https://malmong.github.io'
+          }
         }
-      }
-    });
-  }
-</script>
+      });
+    }
+  </script>
+
+</body>
