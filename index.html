@@ -96,7 +96,7 @@
 
   <script>
     Kakao.init('72d6704def40e268e1835d742ac6f31c');
-
+  
     function sendLink() {
       Kakao.Share.sendDefault({
         objectType: 'feed',
@@ -108,7 +108,19 @@
             mobileWebUrl: 'https://malmong.github.io',
             webUrl: 'https://malmong.github.io'
           }
-        }
+        },
+  
+        buttonTitle: '확인하러 가기',
+  
+        buttons: [
+          {
+            title: '확인하러 가기',
+            link: {
+              mobileWebUrl: 'https://malmong.github.io',
+              webUrl: 'https://malmong.github.io'
+            }
+          }
+        ]
       });
     }
   </script>
