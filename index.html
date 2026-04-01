@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>카카오톡 버튼있는 메시지 전송하기</title>
+  <title>카카오톡 공유 테스트</title>
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: #444;
+    }
+
+    button {
+      background-color: #FEE500;
+      border: none;
+      padding: 14px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
-  <p><strong>아래 카카오톡 버튼을 눌러 전송하세요</strong></p>
+  <h1>카카오톡 공유 테스트</h1>
+  <p>아래 버튼을 누르면 카카오톡 공유창이 열립니다.</p>
 
-  <button id="kakao-share-btn" onclick="sendLink()">
-    카카오톡으로 보내기
-  </button>
+  <button onclick="sendLink()">카카오톡으로 보내기</button>
 
   <script>
     Kakao.init('72d6704def40e268e1835d742ac6f31c');
