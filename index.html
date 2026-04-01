@@ -6,15 +6,22 @@
   <title>깜짝 선물 페이지</title>
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
-<body style="text-align:center; font-family:sans-serif; margin-top:50px;">
 
-  <h1>🎁 깜짝 선물 도착!</h1>
-  <p>아래 버튼으로 친구에게 보내보세요.</p>
+<body style="text-align:center; font-family:sans-serif; margin:0;">
 
-  <button onclick="sendGift()"
-          style="padding:12px 20px; font-size:16px; cursor:pointer; border:none; border-radius:10px; background:#FEE500;">
-    카카오톡으로 보내기
-  </button>
+  <!-- 🔥 배너 이미지 -->
+  <img src="banner.jpg"
+       style="width:100%; max-width:600px; display:block; margin:0 auto;">
+
+  <div style="margin-top:30px;">
+    <h1>🎁 깜짝 선물 도착!</h1>
+    <p>아래 버튼으로 친구에게 보내보세요.</p>
+
+    <button onclick="sendGift()"
+            style="padding:12px 20px; font-size:16px; cursor:pointer; border:none; border-radius:10px; background:#FEE500;">
+      카카오톡으로 보내기
+    </button>
+  </div>
 
   <script>
     Kakao.init('35ebefb59de3ba4d37ac5a2465514fe4');
