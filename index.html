@@ -2,54 +2,27 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>카카오톡 공유 테스트</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>선물 페이지</title>
+
+  <!-- 카카오 SDK -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 80px;
-    }
-
-    h1 {
-      margin-bottom: 12px;
-    }
-
-    p {
-      margin-bottom: 24px;
-      color: #444;
-    }
-
-    button {
-      background-color: #FEE500;
-      border: none;
-      padding: 14px 24px;
-      font-size: 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-  </style>
 </head>
+
 <body style="text-align:center; font-family:sans-serif; margin-top:50px;">
 
   <h1>🎁 선물 도착!</h1>
   <p>아래 이미지를 눌러 확인하세요</p>
 
+  <!-- 이미지 -->
   <a href="banner.gif">
     <img src="banner.gif" width="300">
   </a>
 
   <br><br>
 
+  <!-- 공유 버튼 -->
   <button onclick="sendLink()">친구에게 보내기</button>
-
-</body>
 
   <script>
     Kakao.init('72d6704def40e268e1835d742ac6f31c');
@@ -58,25 +31,17 @@
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '💌 함께 온 메시지',
-          description: '천옥 받아가세요.',
+          title: '🎁 선물 도착!',
+          description: '확인해보세요!',
           imageUrl: 'https://malmong.github.io/image.gif',
           link: {
             mobileWebUrl: 'https://malmong.github.io',
             webUrl: 'https://malmong.github.io'
           }
-        },
-        buttons: [
-          {
-            title: '선물 확인하기',
-            link: {
-              mobileWebUrl: 'https://malmong.github.io',
-              webUrl: 'https://malmong.github.io'
-            }
-          }
-        ]
+        }
       });
     }
   </script>
+
 </body>
 </html>
